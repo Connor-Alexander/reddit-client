@@ -1,15 +1,21 @@
-import React from 'react';
-import { render } from '@testing-library/react';
-import { Provider } from 'react-redux';
-import { store } from './app/store';
-import App from './App';
+/* To have testing run on save run 
+npm test --> a
 
-test('renders learn react link', () => {
-  const { getByText } = render(
-    <Provider store={store}>
-      <App />
-    </Provider>
-  );
+Glossary of Jest: https://jestjs.io/docs/expect#tocontainitem 
+Glossary of Enzyme: https://enzymejs.github.io/enzyme/docs/api/shallow.html 
+*/
 
-  expect(getByText(/learn/i)).toBeInTheDocument();
-});
+import App from "./App";
+import { configure, shallow } from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16';
+
+configure({ adapter: new Adapter() });
+
+describe('<App />', () => { // What are we describing?
+  test('displays correct heading', () => { // What is the test?
+    const wrapper = shallow(<App />);
+    console.log(wrapper.debug())
+
+    expect(wrapper.find('h1').text()).toBe('Reddit-Client') // Expected output?
+  })
+})
