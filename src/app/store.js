@@ -1,8 +1,8 @@
 import { configureStore } from "@reduxjs/toolkit";
-//import counterReducer from '../features/counter/counterSlice';
+import refreshReducer from "../features/Refresh/refreshSlice";
 
 export const store = configureStore({
-  reducer: {
-    //counter: counterReducer,
-  },
-});
+    reducer: {
+        refresh: refreshReducer
+    }
+})
