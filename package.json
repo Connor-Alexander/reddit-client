@@ -7,8 +7,8 @@
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.1.1",
     "@testing-library/user-event": "^14.1.1",
-    "react": "^16.4.0",
-    "react-dom": "^16.4.0",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0",
     "react-redux": "^8.0.1",
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
@@ -36,14 +36,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "@babel/preset-env": "^7.17.10",
-    "@babel/preset-react": "^7.16.7",
-    "babel-jest": "^28.0.3",
-    "enzyme": "^3.11.0",
-    "enzyme-adapter-react-16": "^1.15.6",
-    "jest": "^28.0.3",
-    "react-test-renderer": "^18.1.0"
   }
 }

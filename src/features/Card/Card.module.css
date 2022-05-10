@@ -1,0 +1,51 @@
+.cardPlaceholder {
+    flex-basis: 19%;
+    width: 300px;
+    /* max-height: 25%; */
+    /* aspect-ratio: 1 / 1; */
+    margin: 20px 3%;
+
+    /* flex-shrink: 0; */
+    border: 1px solid red;
+
+    display: grid;
+    grid-template-columns: repeat(5, 60px);
+    grid-template-rows: repeat(5, 60px);
+    text-align: start;
+}
+
+.cardTitleContainer {
+    border: 1px red solid;
+    background-color: rgb(213, 255, 196);
+    grid-column-start: 2;
+    grid-column-end: span 4;
+    grid-row-start: 1;
+    grid-row-end: span 1;
+}
+
+.cardThumbnailContainer {
+    border: 1px red solid;
+    background-color: bisque;
+    grid-column-start: 2;
+    grid-column-end: span 4;
+    grid-row-start: 2;
+    grid-row-end: span 3;
+} 
+
+.cardSideContainer {
+    border: 1px red solid;
+    background-color: rgb(196, 248, 255);
+    grid-column-start: 1;
+    grid-column-end: span 1;
+    grid-row-start: 1;
+    grid-row-end: span 5;
+}
+
+.cardFooterContainer {
+    border: 1px red solid;
+    background-color: rgb(196, 248, 255);
+    grid-column-start: 2;
+    grid-column-end: span 4;
+    grid-row-start: 5;
+    grid-row-end: span 1;
+}
