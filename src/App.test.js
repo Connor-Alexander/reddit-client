@@ -14,8 +14,6 @@ configure({ adapter: new Adapter() });
 describe('<App />', () => { // What are we describing?
   test('displays correct heading', () => { // What is the test?
     const wrapper = shallow(<App />);
-    console.log(wrapper.debug())
-
     expect(wrapper.find('h1').text()).toBe('Reddit-Client') // Expected output?
   })
 })
