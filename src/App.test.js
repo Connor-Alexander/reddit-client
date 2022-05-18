@@ -9,7 +9,7 @@ import App from "./App";
 import Header from "./components/Header";
 import { configure, shallow } from "enzyme";
 import Adapter from "enzyme-adapter-react-16";
-import { Nav } from "react-bootstrap";
+import { Form, Nav } from "react-bootstrap";
 
 configure({ adapter: new Adapter() });
 
@@ -21,7 +21,7 @@ describe("<Header />", () => {
   test("Logo is displayed", () => {
     expect(wrapper.containsMatchingElement(<img />)).toEqual(true);
   });
-  test("Link to home is displayed", () => {
-    expect(wrapper.containsMatchingElement(<Nav.Link />)).toEqual(true);
+  test("Search bar is displayed", () => {
+    expect(wrapper.find(".searchBar").exists()).toEqual(true);
   });
 });
