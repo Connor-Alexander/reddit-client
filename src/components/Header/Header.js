@@ -8,7 +8,7 @@ import {
   Form,
   Button,
 } from "react-bootstrap";
-import Logo from "../images/logo.png";
+import Logo from "../../images/logo.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHome, faUser } from "@fortawesome/free-solid-svg-icons";
 

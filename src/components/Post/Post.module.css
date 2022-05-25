@@ -1,0 +1,157 @@
+.post {
+    margin: 30px 60px;
+
+    /* From Figma */
+    width: 380px;
+    /* height: 380px; */
+    background-color: #e5e5e5;
+    display: block;
+}
+
+.post h2 {
+    /* Font */
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 32px;
+}
+
+.topBar {
+    padding: 17px 11px 10px;
+
+    justify-content: space-between;
+    display: flex
+}
+
+.categoryContainer {
+    /* Transform */
+    height: 26px;
+    width: 110px;
+    position: relative;
+    top: 5px;
+    
+    /* Pos */
+    display: flex;
+    justify-content: center;
+
+    /* Misc */
+    background-color: #8D8D8D;
+    border-radius: 6px;
+} 
+
+.categoryContainer h3 {
+    color: white;
+
+    font-style: italic;
+    font-weight: 300;
+    font-size: 20px;
+}
+
+.topBarBreak {
+    display: block;
+
+    height: 1px;
+    width: 100%;
+    background-color: white;
+}
+
+.image img {
+    width: 100%;
+}
+
+.bottomBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin: 15px 10px;
+}
+
+.bottomBar div {
+    /* padding: 11px; */
+}
+
+.credentialsContainer {
+
+}
+
+.authorName {
+    margin-bottom: 0;
+    display: block;
+    font-size: 24px;
+    font-weight: 300;
+}
+
+.dateCreated {
+    margin-bottom: 0;
+    font-size: 24px;
+    font-weight: 300;
+    font-style: italic;
+    color: #a1a1a1;
+}
+
+.commentsButton {
+    font-size: 16px;
+    color: #8d8d8d;
+
+    height: 32px;
+    width: 66px;
+
+    position: relative;
+    /* top: 13px; */
+    
+    line-height: 16px;
+
+    border: none;
+    background-color: #c4c4c4;
+}
+
+.commentsButton:hover {
+    border: 1px solid grey;
+    /* bottom: 1px;
+    left: 1px; */
+    /* box-shadow: 
+    inset -1px 2px 4px rgba(255, 255, 255, 0.885),
+    inset 2px -2px 4px rgba(0, 0, 0, 0.35),
+    -3px 4px 6px rgba(0, 0, 0, 0.25); */
+}
+
+.commentsButton:active {
+    border: none;
+    bottom: -1px;
+    left: -1px;
+    box-shadow:
+        inset 0px 4px 12px rgba(0, 0, 0, 0.2),
+        inset 4px -4px 6px rgba(255, 255, 255, 0.5);
+}
+
+.votingContainer {
+    width: 86px;
+}
+
+.upVote {
+    position: relative;
+    height: 32px;
+    width: 43px;
+
+    bottom: 15px;
+    left: 1px;
+
+    padding: 0;
+    
+    border: none;
+    background-color: #7e9dfa;
+}
+
+.downVote {
+    position: relative;
+    height: 32px;
+    width: 43px;
+    
+    right: 1px;
+    top: 15px;
+    
+    padding: 0;
+
+    border: none;
+    background-color: #e78787;
+}
