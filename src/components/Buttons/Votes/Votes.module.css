@@ -1,0 +1,15 @@
+.vote {
+    padding: 0;
+    border: none;
+
+    height: 50%;
+    width: 100%;
+}
+
+.downVote {
+    background-color: #e78787;
+}
+
+.upVote {
+    background-color: #7e9dfa;
+}

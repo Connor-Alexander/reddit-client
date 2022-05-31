@@ -18,6 +18,7 @@
 
     /* Troubleshooting Bottom White Space */
     height: 100%;
+    overflow: visible;
 }
 
 .moreButton {

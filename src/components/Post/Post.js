@@ -1,4 +1,6 @@
 import styles from './Post.module.css';
+import { Link } from 'react-router-dom';
+import { UpVote, DownVote } from '../Buttons/Votes/Votes';
 
 function Post() {
     return (
@@ -18,10 +20,11 @@ function Post() {
                     <p className={styles.authorName}>Author</p>
                     <p className={styles.dateCreated}>Created</p>
                 </div>
-                <button className={styles.commentsButton}>14.7k</button>
+                <Link to="/comments"><button className={styles.commentsButton}>14.7k</button></Link>
                 <div className={styles.votingContainer}>
-                    <button className={styles.downVote}></button>
-                    <button className={styles.upVote}></button>
+                    {/* Re-position button components */}
+                    <DownVote />
+                    <UpVote />
                 </div>
             </div>
         </div>

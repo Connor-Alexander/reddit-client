@@ -128,30 +128,12 @@
     width: 86px;
 }
 
-.upVote {
-    position: relative;
-    height: 32px;
-    width: 43px;
-
+/* .voteRight {
     bottom: 15px;
     left: 1px;
+} */
 
-    padding: 0;
-    
-    border: none;
-    background-color: #7e9dfa;
-}
-
-.downVote {
-    position: relative;
-    height: 32px;
-    width: 43px;
-    
+/* .voteLeft {
     right: 1px;
     top: 15px;
-    
-    padding: 0;
-
-    border: none;
-    background-color: #e78787;
-}
+} */
