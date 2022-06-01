@@ -1,0 +1,23 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Issues */
+  /*
+    [o] Right blank space (scroll right to see)
+  */
+
+  min-height: 100%;
+  background-color: rgb(201, 201, 201);
+
+  /* Dev */
+  /* border: 1px solid red; */
+}

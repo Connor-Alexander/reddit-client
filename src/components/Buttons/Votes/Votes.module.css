@@ -1,0 +1,18 @@
+.vote {
+    border: none;
+
+    height: 50%;
+    width: 100%;
+
+    color: rgba(0, 0, 0, 0.4);
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.downVote {
+    background-color: #e78787;
+}
+
+.upVote {
+    background-color: #7e9dfa;
+}

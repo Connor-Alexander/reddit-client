@@ -6,7 +6,7 @@ Glossary of Enzyme: https://enzymejs.github.io/enzyme/docs/api/shallow.html
 */
 
 import App from "./App";
-import Header from "./components/Header";
+import Header from "../components/Header/Header";
 import { configure, shallow } from "enzyme";
 import Adapter from "enzyme-adapter-react-16";
 import { Form, Nav } from "react-bootstrap";
