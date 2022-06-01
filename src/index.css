@@ -10,10 +10,14 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  /* Troubleshooting */
-  /* Notive the random space @ bottom
-  of the page??? */
+  /* Issues */
+  /*
+    [o] Right blank space (scroll right to see)
+  */
+
   min-height: 100%;
-  border: 1px solid red;
   background-color: rgb(201, 201, 201);
+
+  /* Dev */
+  /* border: 1px solid red; */
 }

@@ -71,7 +71,7 @@
 }
 
 .credentialsContainer {
-
+    /* Nothing to go here... */
 }
 
 .authorName {
@@ -126,14 +126,7 @@
 
 .votingContainer {
     width: 86px;
+    height: 48px;
+
+    padding: 0 26px;
 }
-
-/* .voteRight {
-    bottom: 15px;
-    left: 1px;
-} */
-
-/* .voteLeft {
-    right: 1px;
-    top: 15px;
-} */

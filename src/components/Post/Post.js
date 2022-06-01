@@ -23,8 +23,8 @@ function Post() {
                 <Link to="/comments"><button className={styles.commentsButton}>14.7k</button></Link>
                 <div className={styles.votingContainer}>
                     {/* Re-position button components */}
-                    <DownVote />
                     <UpVote />
+                    <DownVote />
                 </div>
             </div>
         </div>
