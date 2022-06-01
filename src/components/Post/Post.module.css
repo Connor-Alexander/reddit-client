@@ -3,6 +3,8 @@
 
     /* From Figma */
     width: 380px;
+    height: fit-content;
+
     /* height: 380px; */
     background-color: #e5e5e5;
     display: block;
@@ -10,7 +12,7 @@
 
 .post h2 {
     /* Font */
-    font-size: 32px;
+    font-size: 24px;
     font-weight: 700;
     line-height: 32px;
 }
@@ -25,13 +27,15 @@
 .categoryContainer {
     /* Transform */
     height: 26px;
-    width: 110px;
+    width: fit-content;
     position: relative;
     top: 5px;
     
     /* Pos */
     display: flex;
     justify-content: center;
+
+    align-items: center;
 
     /* Misc */
     background-color: #8D8D8D;
@@ -41,9 +45,16 @@
 .categoryContainer h3 {
     color: white;
 
+    /* To center-align text */
+    position: relative;
+    bottom: 2px;
+
     font-style: italic;
     font-weight: 300;
     font-size: 20px;
+
+    padding: 5px 10px;
+    margin: 0;
 }
 
 .topBarBreak {
@@ -54,8 +65,17 @@
     background-color: white;
 }
 
+.image {
+    display: flex;
+    justify-content: center;
+
+    background-color: white;
+}
+
 .image img {
-    width: 100%;
+    max-height: 214px;
+
+    position: relative;
 }
 
 .bottomBar {
@@ -64,6 +84,10 @@
     align-items: center;
 
     margin: 15px 10px;
+}
+
+.bottomBar div {
+    width: 66px;
 }
 
 .bottomBar div {
@@ -77,21 +101,21 @@
 .authorName {
     margin-bottom: 0;
     display: block;
-    font-size: 24px;
+    font-size: 18px;
     font-weight: 300;
 }
 
 .dateCreated {
     margin-bottom: 0;
-    font-size: 24px;
+    font-size: 12px;
     font-weight: 300;
     font-style: italic;
-    color: #a1a1a1;
+    color: rgba(0, 0, 0, 0.7);
 }
 
 .commentsButton {
     font-size: 16px;
-    color: #8d8d8d;
+    color: rgba(0, 0, 0, 0.4);
 
     height: 32px;
     width: 66px;
@@ -127,6 +151,5 @@
 .votingContainer {
     width: 66px;
     height: 48px;
-
-    padding: 0 0 0 26px;
+    padding: 0 8px;
 }

@@ -1,13 +1,12 @@
 .vote {
-    padding: 0;
     border: none;
 
     height: 50%;
     width: 100%;
 
-    color: rgba(0, 0, 0, 0.3);
+    color: rgba(0, 0, 0, 0.4);
     font-weight: bold;
-    font-size: 14px;
+    font-size: 12px;
 }
 
 .downVote {

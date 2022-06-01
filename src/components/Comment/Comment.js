@@ -1,5 +1,6 @@
 import styles from './Comment.module.css';
 import { UpVote, DownVote } from '../Buttons/Votes/Votes.js';
+import { timeSince, thousandsHelper } from '../../utils/utils';
 
 function Comment(props) {
     // Hard-coded values for reference
@@ -25,12 +26,16 @@ function Comment(props) {
     return (
         <div className={styles.comment} style={style}>
             <div className={styles.buttonContainer}>
-                <UpVote />
-                <DownVote />
+                <UpVote ups={thousandsHelper(props.data.ups)} />    
+                <DownVote downs={thousandsHelper(props.data.downs)} />
             </div>
-            <p>
-            Apples and pickles and doughnuts and alabamas and apricots like to throw spears and I wish I could throw a spear.
-            </p>
+            <div className={styles.contentContainer}>
+                <p>{props.data.text}</p>
+            <div className={styles.credentials}>
+                <p className={styles.author}>{props.data.author}</p>
+                <p className={styles.created}>{timeSince(props.data.created)}</p>
+            </div>
+            </div>
         </div>
     );
 }

@@ -9,8 +9,7 @@ TODO
     flex-flow: row nowrap;
     float: right;
     
-    height: auto;
-    max-height: 30%;
+    max-height: fit-content;
     
     margin-top: 1px;
     padding: 10px 5px 15px 10px;
@@ -35,4 +34,25 @@ TODO
 
     /* Dev */
     /* border: 1px dotted red; */
+}
+
+.contentContainer {
+    display: block;
+}
+
+.credentials {
+    display: flex;
+    flex-flow: col wrap;
+    position: relative;
+    font-size: 14px;
+}
+
+.author {
+    color: rgba(0, 0, 0, 0.5);
+}
+
+
+.created {
+    font-style: italic;
+    color: rgba(0, 0, 0, 0.33);
 }
