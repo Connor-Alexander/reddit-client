@@ -1,11 +1,15 @@
 import styles from './Votes.module.css';
 
-function UpVote() {
-    return <button className={[styles.vote, styles.upVote].join(" ")}>207</button>;
+function UpVote(props) {
+    const ups = props.ups || 'N/A';
+
+    return <button className={[styles.vote, styles.upVote].join(" ")}>{ups}</button>;
 }
 
-function DownVote() {
-    return <button className={[styles.vote, styles.downVote].join(" ")}>41</button>;
+function DownVote(props = 207) {
+    const downs = props.downs || 'N/A';
+
+    return <button className={[styles.vote, styles.downVote].join(" ")}>{downs}</button>;
 }
 
 export { UpVote, DownVote };

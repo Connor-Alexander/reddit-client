@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router';
 import Comment from '../Comment/Comment';
 
 function Comments() {
-    console.log("Comments component rendered");
+    // console.log("Comments component rendered");
     let navigate = useNavigate();
 
     const handleExit = () => {
