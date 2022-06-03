@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Navbar,
   Container,
@@ -12,11 +12,14 @@ import Logo from "../../images/logo.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHome, faUser } from "@fortawesome/free-solid-svg-icons";
 
-
 function Header() {
-  const handleSubmit = () => {
-    console.log("Submit Search Fired");
-  }
+  const [searchTerm, setsearchTerm] = useState("");
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log("Hi");
+    // console.log("Submit Search Fired");
+  };
 
   return (
     <Navbar bg="dark">
@@ -52,14 +55,21 @@ function Header() {
         </Col>
         <Col xs={6}>
           <Nav.Item>
-            <Form className="searchBar" onSubmit={handleSubmit()}>
+            <Form className="searchBar" onSubmit={handleSubmit}>
               <Row>
                 <Form.Group as={Row}>
                   <Col xs={8}>
-                    <Form.Control type="text" placeholder="Search a post" />
+                    <Form.Control
+                      type="text"
+                      placeholder="Search a post"
+                      value={searchTerm}
+                      onChange={(e) => {
+                        setsearchTerm(e.currentTarget.value);
+                      }}
+                    />
                   </Col>
                   <Col>
-                    <Button>Search</Button>
+                    <Button type="submit">Search</Button>
                   </Col>
                 </Form.Group>
               </Row>
