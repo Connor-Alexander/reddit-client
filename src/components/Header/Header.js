@@ -10,15 +10,17 @@ import {
 } from "react-bootstrap";
 import Logo from "../../images/logo.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHome, faUser } from "@fortawesome/free-solid-svg-icons";
+import { faHome } from "@fortawesome/free-solid-svg-icons";
+import { useDispatch } from "react-redux";
+import { loadSearchResults } from "../Dashboard/dashboardSlice";
 
 function Header() {
+  const dispatch = useDispatch();
   const [searchTerm, setsearchTerm] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Hi");
-    // console.log("Submit Search Fired");
+    dispatch(loadSearchResults(searchTerm));
   };
 
   return (
