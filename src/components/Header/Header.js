@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Navbar,
   Container,
@@ -10,13 +10,18 @@ import {
 } from "react-bootstrap";
 import Logo from "../../images/logo.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHome, faUser } from "@fortawesome/free-solid-svg-icons";
-
+import { faHome } from "@fortawesome/free-solid-svg-icons";
+import { useDispatch } from "react-redux";
+import { loadSearchResults } from "../Dashboard/dashboardSlice";
 
 function Header() {
-  const handleSubmit = () => {
-    console.log("Submit Search Fired");
-  }
+  const dispatch = useDispatch();
+  const [searchTerm, setsearchTerm] = useState("");
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    dispatch(loadSearchResults(searchTerm));
+  };
 
   return (
     <Navbar bg="dark">
@@ -52,14 +57,21 @@ function Header() {
         </Col>
         <Col xs={6}>
           <Nav.Item>
-            <Form className="searchBar" onSubmit={handleSubmit()}>
+            <Form className="searchBar" onSubmit={handleSubmit}>
               <Row>
                 <Form.Group as={Row}>
                   <Col xs={8}>
-                    <Form.Control type="text" placeholder="Search a post" />
+                    <Form.Control
+                      type="text"
+                      placeholder="Search a post"
+                      value={searchTerm}
+                      onChange={(e) => {
+                        setsearchTerm(e.currentTarget.value);
+                      }}
+                    />
                   </Col>
                   <Col>
-                    <Button>Search</Button>
+                    <Button type="submit">Search</Button>
                   </Col>
                 </Form.Group>
               </Row>
