@@ -8,18 +8,42 @@ export const loadSearchResults = createAsyncThunk(
     const jsonAddress = `http://www.reddit.com/search.json?q=${term}&limit=${count}&t=${timeframe}`;
     const data = await fetch(jsonAddress);
     const json = await data.json();
-    console.log(json);
+    return json.data.children;
   }
 );
+
+export const initialLoad = createAsyncThunk(
+  "dashboard/initialLoad",
+  async () => {
+    const count = 10;
+    const jsonAddress = `http://www.reddit.com/r/popular.json?limit=${count}`;
+    const data = await fetch(jsonAddress);
+    const json = await data.json();
+    return json.data.children;
+  }
+)
 
 const dashboard = {
   name: "dashboard",
   initialState: {
-    searchResults: { 0: { topic: "My initial state", author: "Camilo" } },
+    searchResults: [],
     isLoading: false,
     hasError: false,
   },
   extraReducers: {
+    [initialLoad.pending]: (state, action) => {
+      state.isLoading = true;
+      state.hasError = false;
+    },
+    [initialLoad.fulfilled]: (state, action) => {
+      state.isLoading = false;
+      state.hasError = false;
+      state.searchResults = action.payload;
+    },
+    [initialLoad.rejected]: (state, action) => {
+      state.isLoading = false;
+      state.hasError = true;
+    },
     [loadSearchResults.pending]: (state, action) => {
       state.isLoading = true;
       state.hasError = false;
@@ -27,7 +51,7 @@ const dashboard = {
     [loadSearchResults.fulfilled]: (state, action) => {
       state.isLoading = false;
       state.hasError = false;
-      // Here, we need to update the state searchREsults
+      state.searchResults = action.payload;
     },
     [loadSearchResults.rejected]: (state, action) => {
       state.isLoading = false;
