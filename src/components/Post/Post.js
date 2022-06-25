@@ -22,6 +22,7 @@ function Post(props) {
               ? defaultImage
               : props.data.data.thumbnail
           }
+          alt={"No found"}
         />
       </div>
       `
@@ -34,12 +35,16 @@ function Post(props) {
         </div>
         <Link to="/comments">
           <button className={styles.commentsButton}>
-            {thousandsHelper(props.data.num_comments)}
+            {thousandsHelper(props.data.data.num_comments)}
           </button>
         </Link>
         <div className={styles.votingContainer}>
           <UpVote ups={thousandsHelper(props.data.data.ups)} />
-          <DownVote downs={thousandsHelper(props.data.data.downs)} />
+          <DownVote
+            downs={props.data.data.downs}
+            upvoteRatio={props.data.data.upvote_ratio}
+            ups={props.data.data.ups}
+          />
         </div>
       </div>
     </div>
