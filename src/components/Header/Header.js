@@ -21,6 +21,7 @@ function Header() {
   const handleSubmit = (e) => {
     e.preventDefault();
     dispatch(loadSearchResults(searchTerm));
+    setsearchTerm("");
   };
 
   return (

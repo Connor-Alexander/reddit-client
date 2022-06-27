@@ -12,6 +12,7 @@ const timeSince = (dateCreated) => {
 }
 
 const thousandsHelper = (a) => {
+    if (a === 0) return a;
     if (!a) return 'N/A';
     if (a < 1000) return a;
     if (a < 1000000) return Math.round((a/1000) * 10) / 10 + 'k';

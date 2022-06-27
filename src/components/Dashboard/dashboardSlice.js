@@ -21,7 +21,7 @@ export const initialLoad = createAsyncThunk(
     const json = await data.json();
     return json.data.children;
   }
-)
+);
 
 const dashboard = {
   name: "dashboard",
